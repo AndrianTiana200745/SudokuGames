@@ -20,14 +20,14 @@ public class CrosswordGui extends JFrame {
     private final Map<String, String> solutions = new HashMap<>();
 
     private final List<String> wordPool = Arrays.asList(
-            "JAVA","PYTHON","LOGIC","PUZZLE","CROSS","WORD","CODE","ARRAY",
-            "FRAME","THREAD","STRING","INTEGER","BOOLEAN","FUNCTION","OBJECT",
-            "CLASS","METHOD","VARIABLE","SWING","COMPILER","INTERFACE","PACKAGE",
-            "EXCEPTION","LOOP","CONDITION","STACK","QUEUE","ALGORITHM","DEBUG"
+            "AMOUR","AIMER","LOGIQUE","CARÉMENT","PLEURER","MONDE","VIE","PERDRE",
+            "TERRE","VALABLE","TRAHISON","CHIFFRE","AMITIÉ","FONCTION","TRISTE",
+            "ÉCOLE","LAC","CHAT","CACHE","CHIEN","SOURIRE","VENT",
+            "ADIEU","MARIER","CONDITION","VARIÉ","TOURISTE","RAGE","TEMPS"
     );
 
     public CrosswordGui() {
-        setTitle("📝 Mots Croisés – IA Moderne");
+        setTitle("📝 Mots Croisés");
         setSize(1150, 800);
         //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -35,7 +35,7 @@ public class CrosswordGui extends JFrame {
         setLayout(new BorderLayout(10,10));
 
         // TITRE
-        JLabel title = new JLabel("Mots Croisés — IA Moderne", SwingConstants.CENTER);
+        JLabel title = new JLabel("Mots Croisés", SwingConstants.CENTER);
         title.setFont(new Font("Segoe UI", Font.BOLD, 30));
         title.setBorder(BorderFactory.createEmptyBorder(10,10,0,10));
         add(title, BorderLayout.NORTH);

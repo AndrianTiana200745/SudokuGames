@@ -1,16 +1,18 @@
 import javax.swing.*;
 import java.awt.*;
+import com.formdev.flatlaf.FlatDarkLaf;
 
 /**
  * Menu principal moderne avec un design ergonomique et élégant.
  */
 public class Menu extends JFrame {
 
-    private JButton sudokuButton, crosswordButton;
+    private JButton sudokuButton, crosswordButton, snake;
     private JPanel mainPanel;
     private JLabel titleLabel, subtitleLabel;
 
     public Menu() {
+        FlatDarkLaf.setup();
         // Configuration de base
         setTitle("Menu Principal");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -55,12 +57,17 @@ public class Menu extends JFrame {
         crosswordButton = createModernButton("📝 Jouer au Mot Croisé", accentColor, Color.WHITE);
         crosswordButton.addActionListener(e -> SwingUtilities.invokeLater(CrosswordGui::new));
 
+        snake = createModernButton("SnakeGame", accentColor, Color.WHITE);
+        snake.addActionListener(e -> SwingUtilities.invokeLater(SnakeGame::new));
+
         // --- Ajout des éléments ---
         mainPanel.add(titleLabel);
         mainPanel.add(subtitleLabel);
         mainPanel.add(sudokuButton);
         mainPanel.add(Box.createRigidArea(new Dimension(0, 20)));
         mainPanel.add(crosswordButton);
+        mainPanel.add(Box.createRigidArea(new Dimension(0, 20)));
+        mainPanel.add(snake);
 
         // --- Centrage dans la fenêtre ---
         GridBagConstraints gbc = new GridBagConstraints();

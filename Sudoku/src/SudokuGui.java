@@ -5,6 +5,7 @@ import java.awt.event.*;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
+import com.formdev.flatlaf.FlatDarkLaf;
 
 public class SudokuGui extends JFrame {
     private int[][] solution;
@@ -15,6 +16,7 @@ public class SudokuGui extends JFrame {
     private int elapsedSeconds = 0;
 
     public SudokuGui() {
+        FlatDarkLaf.setup();
 
         setTitle("🎮 Sudoku Challenge");
         setSize(700, 800);
